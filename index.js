@@ -8,13 +8,18 @@ const {
     REST, 
     SlashCommandBuilder, 
     Events, 
-    MessageFlags 
+    MessageFlags,
+    ActionRowBuilder,           // Adicionado
+    StringSelectMenuBuilder,    // Adicionado
+    StringSelectMenuOptionBuilder, // Adicionado
+    ButtonBuilder,              // Adicionado
+    ButtonStyle                 // Adicionado
 } = require('discord.js');
 
+// Mantendo seus caminhos originais
 const CycleRepository = require('./src/classes/CycleRepository');
 const StudentManager = require('./src/classes/StudentManager');
 const ImageHandler = require('./src/classes/ImageHandler');
-
 
 const cycles = new CycleRepository();
 const students = new StudentManager();
@@ -35,7 +40,7 @@ const commands = [
         .addIntegerOption(o => o.setName('total').setDescription('Total de questões feitas').setRequired(true)),
     new SlashCommandBuilder().setName('rankq').setDescription('Ranking detalhado')
         .addUserOption(o => o.setName('usuario').setDescription('Ver usuário específico')),
-    new SlashCommandBuilder().setName('bancoq').setDescription('Ver minhas questões organizadas')
+    new SlashCommandBuilder().setName('bancoq').setDescription('Ver minhas questões organizadas (Interativo)')
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
@@ -46,13 +51,210 @@ client.once(Events.ClientReady, async () => {
     if (guildId) await rest.put(Routes.applicationGuildCommands(client.user.id, guildId), { body: commands });
 });
 
-client.on(Events.InteractionCreate, async interaction => {
-    if (!interaction.isChatInputCommand()) return;
+// --- FUNÇÕES AUXILIARES (NOVO SISTEMA DE MENUS) ---
 
-    const { commandName } = interaction;
+async function renderQuestionMenu(interaction, user, cycleId, page = 0) {
+    let questions = [];
+    let cycleTitle = "";
+
+    // 1. Busca as questões
+    if (cycleId === 'current') {
+        questions = user.currentCycleHits;
+        cycleTitle = `Ciclo Atual (${user.currentCycleId})`;
+    } else {
+        const cycleData = user.history.find(h => h.cycleId === cycleId);
+        if (cycleData) {
+            questions = cycleData.details || [];
+            cycleTitle = `Ciclo ${cycleId}`;
+        }
+    }
+
+    if (questions.length === 0) {
+        // Se não tiver questão, tenta atualizar ou responder
+        const payload = { content: "⚠️ Não há questões salvas neste ciclo.", components: [], embeds: [] };
+        if (interaction.isMessageComponent()) return interaction.update(payload);
+        return interaction.reply(payload);
+    }
+
+    // 2. Lógica de Paginação (Limite de 25)
+    const ITEMS_PER_PAGE = 25;
+    const totalPages = Math.ceil(questions.length / ITEMS_PER_PAGE);
+    
+    if (page < 0) page = 0;
+    if (page >= totalPages) page = totalPages - 1;
+
+    const start = page * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    const currentQuestions = questions.slice(start, end);
+
+    // 3. Cria o Menu
+    const selectMenu = new StringSelectMenuBuilder()
+        .setCustomId(`select_question_${cycleId}_${page}`)
+        .setPlaceholder(`Página ${page + 1}/${totalPages} - Selecione uma questão`)
+        .addOptions(
+            currentQuestions.map((q, index) => {
+                const globalIndex = start + index;
+                return new StringSelectMenuOptionBuilder()
+                    .setLabel(`Q${globalIndex + 1} - ${q.topic}`)
+                    .setDescription(q.date ? new Date(q.date).toLocaleDateString('pt-BR') : 'Data desc.')
+                    .setValue(globalIndex.toString())
+            })
+        );
+
+    const menuRow = new ActionRowBuilder().addComponents(selectMenu);
+
+    // 4. Cria Botões (Voltar, Ant, Prox)
+    const navButtons = [];
+    navButtons.push(new ButtonBuilder().setCustomId('btn_back_cycles').setLabel('⬅️ Voltar aos Ciclos').setStyle(ButtonStyle.Secondary));
+
+    if (page > 0) {
+        navButtons.push(new ButtonBuilder().setCustomId(`btn_page_${cycleId}_${page - 1}`).setLabel('◀️ Ant').setStyle(ButtonStyle.Primary));
+    }
+    if (page < totalPages - 1) {
+        navButtons.push(new ButtonBuilder().setCustomId(`btn_page_${cycleId}_${page + 1}`).setLabel('Prox ▶️').setStyle(ButtonStyle.Primary));
+    }
+
+    const navRow = new ActionRowBuilder().addComponents(navButtons);
+
+    const embed = new EmbedBuilder()
+        .setColor(0x0099FF)
+        .setTitle(`📂 ${cycleTitle}`)
+        .setFooter({ text: `Página ${page + 1} de ${totalPages} • Total: ${questions.length} questões` })
+        .setDescription(`Escolha uma questão abaixo.`);
+
+    if (interaction.isMessageComponent()) {
+        await interaction.update({ embeds: [embed], components: [menuRow, navRow] });
+    } else {
+        await interaction.reply({ embeds: [embed], components: [menuRow, navRow] });
+    }
+}
+
+async function renderCycleMenu(interaction, user) {
+    const history = user.history;
+    const currentHits = user.currentCycleHits.length;
+
+    const selectMenu = new StringSelectMenuBuilder()
+        .setCustomId('select_cycle')
+        .setPlaceholder('Selecione um Ciclo');
+
+    if (currentHits > 0) {
+        selectMenu.addOptions(
+            new StringSelectMenuOptionBuilder()
+                .setLabel(`Ciclo Atual (${user.currentCycleId})`)
+                .setDescription(`Em andamento - ${currentHits} questões`)
+                .setValue('current')
+                .setEmoji('🔄')
+        );
+    }
+
+    // Histórico reverso (mais novos primeiro)
+    history.slice().reverse().slice(0, 24).forEach(h => {
+        selectMenu.addOptions(
+            new StringSelectMenuOptionBuilder()
+                .setLabel(`Ciclo ${h.cycleId}`)
+                .setDescription(`Concluído - ${h.hits} questões`)
+                .setValue(h.cycleId)
+                .setEmoji('📂')
+        );
+    });
+
+    const row = new ActionRowBuilder().addComponents(selectMenu);
+    const embed = new EmbedBuilder()
+        .setColor(0x2B2D31)
+        .setTitle(`📚 Banco de Questões de ${user.username}`)
+        .setDescription("Selecione um ciclo para ver as questões.");
+
+    if (interaction.isMessageComponent()) {
+        await interaction.update({ embeds: [embed], components: [row] });
+    } else {
+        await interaction.reply({ embeds: [embed], components: [row] });
+    }
+}
+
+// --- EVENTO PRINCIPAL ---
+
+client.on(Events.InteractionCreate, async interaction => {
+    // Carrega o usuário sempre
     const user = students.getStudent(interaction.user.id, interaction.user.username);
 
     try {
+        // ====================================================
+        // 1. TRATAMENTO DOS MENUS INTERATIVOS (NOVO)
+        // ====================================================
+        if (interaction.isStringSelectMenu() || interaction.isButton()) {
+            
+            // A. Escolheu um ciclo
+            if (interaction.customId === 'select_cycle') {
+                const selectedCycleId = interaction.values[0];
+                await renderQuestionMenu(interaction, user, selectedCycleId, 0);
+            }
+
+            // B. Paginação (Ant/Prox)
+            else if (interaction.customId.startsWith('btn_page_')) {
+                const parts = interaction.customId.split('_');
+                const cycleId = parts[2];
+                const page = parseInt(parts[3]);
+                await renderQuestionMenu(interaction, user, cycleId, page);
+            }
+
+            // C. Voltar para Menu de Ciclos
+            else if (interaction.customId === 'btn_back_cycles') {
+                await renderCycleMenu(interaction, user);
+            }
+
+            // D. Escolheu uma questão específica
+            else if (interaction.customId.startsWith('select_question_')) {
+                const parts = interaction.customId.split('_');
+                const cycleId = parts[2];
+                const page = parseInt(parts[3]); // Guarda a página para poder voltar
+                const questionIndex = parseInt(interaction.values[0]);
+
+                let questions = [];
+                if (cycleId === 'current') questions = user.currentCycleHits;
+                else {
+                    const cData = user.history.find(h => h.cycleId === cycleId);
+                    if (cData) questions = cData.details || [];
+                }
+
+                const question = questions[questionIndex];
+                if (!question) return interaction.update({ content: "❌ Erro ao carregar questão.", components: [] });
+
+                const url = question.url || '';
+                const hasLink = url.length > 0;
+                
+                const embed = new EmbedBuilder()
+                    .setColor(0x2B2D31)
+                    .setTitle(`📝 Questão ${questionIndex + 1} - ${question.topic}`)
+                    .setDescription(hasLink ? "✅ **Imagem encontrada!** Clique no botão para ver." : "⚠️ **Sem link de backup.**");
+
+                const row = new ActionRowBuilder();
+                
+                // Botão "Voltar para lista" (na mesma página que estava)
+                row.addComponents(
+                    new ButtonBuilder()
+                        .setCustomId(`btn_page_${cycleId}_${page}`)
+                        .setLabel('⬅️ Voltar')
+                        .setStyle(ButtonStyle.Secondary)
+                );
+
+                if (hasLink) {
+                    row.addComponents(
+                        new ButtonBuilder().setLabel('Ver Imagem').setStyle(ButtonStyle.Link).setURL(url)
+                    );
+                }
+
+                await interaction.update({ embeds: [embed], components: [row] });
+            }
+            return; // Encerra aqui se foi uma interação de menu/botão
+        }
+
+
+        // ====================================================
+        // 2. TRATAMENTO DOS COMANDOS SLASH (MANTIDOS ORIGINAIS)
+        // ====================================================
+        if (!interaction.isChatInputCommand()) return;
+        const { commandName } = interaction;
+
         // --- COMANDO CICLO ---
         if (commandName === 'ciclo') {
             const currentCycle = cycles.getCycle(user.currentCycleId);
@@ -87,7 +289,6 @@ client.on(Events.InteractionCreate, async interaction => {
             
             let permanentUrl = attachment.url;
             
-            // Bloco de Backup Isolado (Se falhar, não impede de salvar a questão)
             try {
                 if (process.env.BACKUP_CHANNEL_ID) {
                     const backupChannel = await client.channels.fetch(process.env.BACKUP_CHANNEL_ID);
@@ -100,7 +301,7 @@ client.on(Events.InteractionCreate, async interaction => {
                     }
                 }
             } catch (err) {
-                console.error("Erro no backup (imagem salva apenas localmente):", err.message);
+                console.error("Erro no backup:", err.message);
             }
 
             const totalHits = students.addHit(interaction.user.id, typeMap[type], savedPath, permanentUrl);
@@ -155,7 +356,6 @@ client.on(Events.InteractionCreate, async interaction => {
             } else {
                 const allStudents = students.getAllStudents();
                 
-                // Lógica de ordenação (Aproveitamento Geral)
                 allStudents.sort((a, b) => {
                     const calcRate = (s) => {
                         const h = s.history.reduce((acc, cur) => acc + cur.hits, 0);
@@ -183,37 +383,17 @@ client.on(Events.InteractionCreate, async interaction => {
             }
         }
         
-        // --- COMANDO BANCOQ ---
+        // --- COMANDO BANCOQ (ATUALIZADO) ---
         else if (commandName === 'bancoq') {
+             // Agora apenas chamamos a função auxiliar que gera o menu
              const history = user.history;
-             const current = user.currentCycleHits;
-             const embed = new EmbedBuilder().setTitle(`📚 Banco de Questões de ${interaction.user.username}`).setColor(0x2B2D31);
-             
-             // Histórico
-             history.slice(-3).forEach(cycle => {
-                if (cycle.details?.length) {
-                    const lines = cycle.details.map((d, i) => {
-                        const url = d.url || '';
-                        const linkText = url.includes('discord.com/channels') ? 'Ver Backup' : 'Link Antigo';
-                        return url ? `[${d.topic}] Q${i+1}: [${linkText}](${url})` : `[${d.topic}] Q${i+1}: (Sem link)`;
-                    }).join('\n');
-                    embed.addFields({ name: `📂 Ciclo ${cycle.cycleId}`, value: lines.substring(0, 1024) });
-                }
-             });
+             const currentHits = user.currentCycleHits.length;
 
-             // Ciclo Atual (Estava faltando no seu código)
-             if (current.length > 0) {
-                 const lines = current.map((d, i) => {
-                     const url = d.url || '';
-                     const linkText = url.includes('discord.com/channels') ? 'Ver Backup' : 'Link Antigo';
-                     return url ? `[${d.topic}] Q${i+1}: [${linkText}](${url})` : `[${d.topic}] Q${i+1}: (Sem link)`;
-                 }).join('\n');
-                 embed.addFields({ name: `🔄 Ciclo Atual (${user.currentCycleId})`, value: lines.substring(0, 1024) });
-             } else if (history.length === 0) {
-                 embed.setDescription("Nenhuma questão registrada ainda.");
+             if (history.length === 0 && currentHits === 0) {
+                 return interaction.reply({ content: "Você ainda não tem questões registradas.", flags: MessageFlags.Ephemeral });
              }
-
-             await interaction.reply({ embeds: [embed] });
+             
+             await renderCycleMenu(interaction, user);
         }
 
     } catch (error) {

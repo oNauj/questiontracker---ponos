@@ -1,1 +1,623 @@
-{}
+{
+  "799273781339357205": {
+    "username": "onaujinho_",
+    "currentCycleId": "1.3",
+    "currentCycleHits": [],
+    "history": [
+      {
+        "cycleId": "1.1",
+        "totalQuestions": 60,
+        "hits": 46,
+        "details": [
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763953921868.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352033603649646",
+            "date": "2025-11-24T03:12:02.788Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763953938089.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352100691546247",
+            "date": "2025-11-24T03:12:18.692Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763953959120.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352188818194543",
+            "date": "2025-11-24T03:12:39.831Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763953969396.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352232346685561",
+            "date": "2025-11-24T03:12:50.098Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763953978352.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352269730250782",
+            "date": "2025-11-24T03:12:58.981Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763953993416.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352332989005949",
+            "date": "2025-11-24T03:13:14.541Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954006179.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352386797736026",
+            "date": "2025-11-24T03:13:26.882Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954015309.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352424693268622",
+            "date": "2025-11-24T03:13:35.918Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954039474.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352525943635970",
+            "date": "2025-11-24T03:14:00.235Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954053834.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352585813135423",
+            "date": "2025-11-24T03:14:14.406Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954067052.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352641823740085",
+            "date": "2025-11-24T03:14:27.676Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954077304.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352686291882128",
+            "date": "2025-11-24T03:14:38.549Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954085365.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352718348812320",
+            "date": "2025-11-24T03:14:46.068Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954097233.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352768340988025",
+            "date": "2025-11-24T03:14:57.850Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954117868.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442352855942959216",
+            "date": "2025-11-24T03:15:18.859Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954224719.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353303043182725",
+            "date": "2025-11-24T03:17:05.320Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954233757.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353341136113745",
+            "date": "2025-11-24T03:17:14.530Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954243711.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353382890274927",
+            "date": "2025-11-24T03:17:24.397Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954252652.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353421020565504",
+            "date": "2025-11-24T03:17:33.486Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954288821.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353571998863526",
+            "date": "2025-11-24T03:18:09.552Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954309254.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353657663455316",
+            "date": "2025-11-24T03:18:30.011Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954316616.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353689003167818",
+            "date": "2025-11-24T03:18:37.395Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954325401.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353724985966705",
+            "date": "2025-11-24T03:18:46.194Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954346962.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353815671013547",
+            "date": "2025-11-24T03:19:07.726Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954367178.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353900752474202",
+            "date": "2025-11-24T03:19:27.959Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954376790.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353941106135050",
+            "date": "2025-11-24T03:19:37.656Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954384940.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442353974979334318",
+            "date": "2025-11-24T03:19:45.642Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954395947.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354021141844079",
+            "date": "2025-11-24T03:19:56.550Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954407159.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354068180701235",
+            "date": "2025-11-24T03:20:07.807Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954418244.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354114716631214",
+            "date": "2025-11-24T03:20:19.052Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954427233.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354152473755832",
+            "date": "2025-11-24T03:20:28.177Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954434486.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354182702235812",
+            "date": "2025-11-24T03:20:35.056Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954446539.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354233461575753",
+            "date": "2025-11-24T03:20:47.121Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954468090.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354324805128387",
+            "date": "2025-11-24T03:21:08.999Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954481353.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354379410640936",
+            "date": "2025-11-24T03:21:21.972Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954503919.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354474004910110",
+            "date": "2025-11-24T03:21:44.562Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954524371.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354559770034259",
+            "date": "2025-11-24T03:22:04.920Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954533786.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354598995165287",
+            "date": "2025-11-24T03:22:14.311Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954542658.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354636416745563",
+            "date": "2025-11-24T03:22:23.244Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954566103.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354734869512324",
+            "date": "2025-11-24T03:22:46.745Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954580079.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354793455816835",
+            "date": "2025-11-24T03:23:00.696Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954589613.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354833796501504",
+            "date": "2025-11-24T03:23:10.385Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954597929.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354868366082088",
+            "date": "2025-11-24T03:23:18.531Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954605915.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354901803077702",
+            "date": "2025-11-24T03:23:26.513Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954613976.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354935575482448",
+            "date": "2025-11-24T03:23:34.637Z"
+          },
+          {
+            "topic": "Matemática",
+            "imagePath": "images/Matemática/onaujinho__1-1_1763954621511.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442354967360049265",
+            "date": "2025-11-24T03:23:42.198Z"
+          }
+        ]
+      },
+      {
+        "cycleId": "1.2",
+        "totalQuestions": 74,
+        "hits": 53,
+        "details": [
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763954927115.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356248912597042",
+            "date": "2025-11-24T03:28:47.810Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763954940596.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356306089476146",
+            "date": "2025-11-24T03:29:01.305Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763954951456.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356351157403732",
+            "date": "2025-11-24T03:29:12.164Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763954962560.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356397642748005",
+            "date": "2025-11-24T03:29:23.106Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763954972972.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356441666162871",
+            "date": "2025-11-24T03:29:33.733Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955009374.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356594263199836",
+            "date": "2025-11-24T03:30:10.025Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955020894.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356642531508325",
+            "date": "2025-11-24T03:30:21.644Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955032960.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356692854636586",
+            "date": "2025-11-24T03:30:33.502Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955042101.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356731328860253",
+            "date": "2025-11-24T03:30:42.677Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955055249.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356786396004453",
+            "date": "2025-11-24T03:30:55.795Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955067764.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356839294439504",
+            "date": "2025-11-24T03:31:08.499Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955078461.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356883913572484",
+            "date": "2025-11-24T03:31:19.334Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955092114.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442356941216288829",
+            "date": "2025-11-24T03:31:33.530Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955153819.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357199723561052",
+            "date": "2025-11-24T03:32:34.447Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955168004.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357259693854751",
+            "date": "2025-11-24T03:32:48.688Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955180289.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357310558179434",
+            "date": "2025-11-24T03:33:02.380Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955197063.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357380925886606",
+            "date": "2025-11-24T03:33:17.677Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955212882.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357447636291724",
+            "date": "2025-11-24T03:33:33.454Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955236412.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357546496032909",
+            "date": "2025-11-24T03:33:58.511Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955249374.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357600585777152",
+            "date": "2025-11-24T03:34:09.972Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955265052.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357666461519943",
+            "date": "2025-11-24T03:34:25.832Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955276192.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357713316085840",
+            "date": "2025-11-24T03:34:36.813Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955289786.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357770136457277",
+            "date": "2025-11-24T03:34:50.377Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955302487.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357823433609379",
+            "date": "2025-11-24T03:35:03.051Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955333794.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442357956615340245",
+            "date": "2025-11-24T03:35:35.201Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955384912.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358168914231360",
+            "date": "2025-11-24T03:36:26.880Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955398802.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358227244154975",
+            "date": "2025-11-24T03:36:39.403Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955413937.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358290779738253",
+            "date": "2025-11-24T03:36:54.525Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955436199.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358384111386645",
+            "date": "2025-11-24T03:37:16.773Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955449099.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358438129700928",
+            "date": "2025-11-24T03:37:29.751Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955460674.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358486888349848",
+            "date": "2025-11-24T03:37:41.229Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955471977.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358534196039732",
+            "date": "2025-11-24T03:37:52.618Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1763955484057.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442358585479663697",
+            "date": "2025-11-24T03:38:04.894Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033103334.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684143908425848",
+            "date": "2025-11-25T01:11:44.196Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033117332.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684202540601424",
+            "date": "2025-11-25T01:11:57.894Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033131083.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684260090904577",
+            "date": "2025-11-25T01:12:11.855Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033154732.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684359554629672",
+            "date": "2025-11-25T01:12:35.440Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033188829.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684503150559443",
+            "date": "2025-11-25T01:13:09.761Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033244570.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684736207192194",
+            "date": "2025-11-25T01:14:05.131Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033285548.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684907959746592",
+            "date": "2025-11-25T01:14:46.112Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033304648.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442684988339257436",
+            "date": "2025-11-25T01:15:05.484Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033328378.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685087484219564",
+            "date": "2025-11-25T01:15:29.025Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033344651.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685155679666190",
+            "date": "2025-11-25T01:15:45.351Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033395753.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685370109001928",
+            "date": "2025-11-25T01:16:36.280Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033425706.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685495833395361",
+            "date": "2025-11-25T01:17:06.319Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033458287.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685632353927282",
+            "date": "2025-11-25T01:17:38.795Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033472953.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685694081237042",
+            "date": "2025-11-25T01:17:53.547Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033495480.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685788704866454",
+            "date": "2025-11-25T01:18:16.061Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033499177.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442685804571787376",
+            "date": "2025-11-25T01:18:20.107Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033546094.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442686000747909262",
+            "date": "2025-11-25T01:19:06.694Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033571118.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442686106033459290",
+            "date": "2025-11-25T01:19:31.887Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033586225.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442686169300340756",
+            "date": "2025-11-25T01:19:46.852Z"
+          },
+          {
+            "topic": "Física",
+            "imagePath": "images/Física/onaujinho__1-2_1764033619413.png",
+            "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1442686308190523445",
+            "date": "2025-11-25T01:20:20.086Z"
+          }
+        ]
+      }
+    ]
+  },
+  "1374826016077512814": {
+    "username": "naosabomatematica2_94301",
+    "currentCycleId": "1.1",
+    "currentCycleHits": [],
+    "history": []
+  }
+}
