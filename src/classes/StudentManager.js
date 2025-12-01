@@ -24,39 +24,63 @@ class StudentManager {
         if (!this.data[userId]) {
             this.data[userId] = {
                 username: username,
-                currentCycleId: "1.1", // Começa no 1.1 agora
+                currentCycleId: "1.1",
                 currentCycleHits: [], 
+                simulados: [],
                 history: [] 
             };
+            this.save();
+        }
+        if (!this.data[userId].simulados) {
+            this.data[userId].simulados = [];
             this.save();
         }
         return this.data[userId];
     }
 
-    addHit(userId, topic, imagePath, url) {
-        const student = this.data[userId];
-        student.currentCycleHits.push({ topic, imagePath, url, date: new Date() });
+    // --- MUDANÇA AQUI: filesData deve ser um array [{ path, url }] ---
+    addHit(userId, topic, filesData) {
+        const student = this.getStudent(userId);
+        
+        // Estrutura do objeto salva no JSON
+        const hitData = { 
+            topic, 
+            files: filesData, // Agora salvamos o array com todas as imagens
+            date: new Date() 
+        };
+
+        if (topic === 'Simulado') {
+            student.simulados.push(hitData);
+            this.save();
+            return student.simulados.length;
+        } 
+
+        student.currentCycleHits.push(hitData);
         this.save();
         return student.currentCycleHits.length;
     }
 
-    // --- NOVA FUNÇÃO DE REMOVER ---
     removeLastHit(userId) {
         const student = this.data[userId];
         if (!student || student.currentCycleHits.length === 0) {
             return { success: false, msg: "Nenhuma questão para remover no ciclo atual." };
         }
 
-        const removed = student.currentCycleHits.pop(); // Remove o último
+        const removed = student.currentCycleHits.pop();
         this.save();
 
-        // Tenta apagar o arquivo do computador para economizar espaço
-        try {
-            if (fs.existsSync(removed.imagePath)) {
-                fs.unlinkSync(removed.imagePath);
-            }
-        } catch (e) {
-            console.error("Erro ao apagar arquivo local:", e);
+        // Tenta apagar todos os arquivos locais vinculados a essa questão
+        if (removed.files && Array.isArray(removed.files)) {
+            removed.files.forEach(file => {
+                try {
+                    if (fs.existsSync(file.path)) fs.unlinkSync(file.path);
+                } catch (e) { console.error("Erro ao apagar arquivo:", e); }
+            });
+        } else if (removed.imagePath) {
+            // Compatibilidade com estrutura antiga
+            try {
+                if (fs.existsSync(removed.imagePath)) fs.unlinkSync(removed.imagePath);
+            } catch (e) {}
         }
 
         return { success: true, topic: removed.topic, remaining: student.currentCycleHits.length };
@@ -65,7 +89,6 @@ class StudentManager {
     completeCycle(userId, cycleId, totalQuestions, nextCycleId) {
         const student = this.data[userId];
         
-        // Compara IDs como string
         if (student.currentCycleId !== cycleId) return { success: false, msg: `Você está no ciclo ${student.currentCycleId}, não no ${cycleId}!` };
         
         student.history.push({
@@ -75,7 +98,6 @@ class StudentManager {
             details: [...student.currentCycleHits]
         });
 
-        // Avança para o próximo ID calculado pelo Repository
         if (nextCycleId) {
             student.currentCycleId = nextCycleId;
         } else {

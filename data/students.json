@@ -2,7 +2,40 @@
   "799273781339357205": {
     "username": "onaujinho_",
     "currentCycleId": "1.3",
-    "currentCycleHits": [],
+    "currentCycleHits": [
+      {
+        "topic": "Matemática",
+        "files": [
+          {
+            "path": "images/Matemática/onaujinho__1-3_1764588397323_0.png",
+            "url": "https://cdn.discordapp.com/attachments/1442329731759603833/1445013215867306064/onaujinho__1-3_1764588397323_0.png?ex=692ecced&is=692d7b6d&hm=3c9105f4753a80896455292f3f1e8e774fde60c63e2684cb7a169db3e7434d9e&"
+          },
+          {
+            "path": "images/Matemática/onaujinho__1-3_1764588397495_1.png",
+            "url": "https://cdn.discordapp.com/attachments/1442329731759603833/1445013216093671474/onaujinho__1-3_1764588397495_1.png?ex=692ecced&is=692d7b6d&hm=a33543bcb207f62179c92314f0cac9a2fc8fd1e1d18eab4140c64f40d5faba7e&"
+          }
+        ],
+        "date": "2025-12-01T11:26:38.098Z"
+      },
+      {
+        "topic": "Matemática",
+        "files": [
+          {
+            "path": "images/Matemática/onaujinho__1-3_1764588476722_0.png",
+            "url": "https://cdn.discordapp.com/attachments/1442329731759603833/1445013549179994274/onaujinho__1-3_1764588476722_0.png?ex=692ecd3d&is=692d7bbd&hm=15737da3b4014f77d0d3d4e3f0d0b22e85b1215c0596e3e83aa6d94c8f233c00&"
+          },
+          {
+            "path": "images/Matemática/onaujinho__1-3_1764588476835_1.png",
+            "url": "https://cdn.discordapp.com/attachments/1442329731759603833/1445013549402427513/onaujinho__1-3_1764588476835_1.png?ex=692ecd3d&is=692d7bbd&hm=162f0601711aa553c49e4bbce6b9603d4aa7da91d5e2e8a43640212f0d7b975d&"
+          },
+          {
+            "path": "images/Matemática/onaujinho__1-3_1764588476960_2.png",
+            "url": "https://cdn.discordapp.com/attachments/1442329731759603833/1445013549628915764/onaujinho__1-3_1764588476960_2.png?ex=692ecd3d&is=692d7bbd&hm=12169c6032d4881740d103e1a64c1a54a8259fd2785507afa3cc19ca82207bb0&"
+          }
+        ],
+        "date": "2025-12-01T11:27:57.576Z"
+      }
+    ],
     "history": [
       {
         "cycleId": "1.1",
@@ -612,12 +645,21 @@
           }
         ]
       }
+    ],
+    "simulados": [
+      {
+        "topic": "Simulado",
+        "imagePath": "images/Simulado/onaujinho__Simulado_1764520677544.png",
+        "url": "https://discord.com/channels/1425173768472625276/1442329731759603833/1444729178086969527",
+        "date": "2025-11-30T16:37:58.128Z"
+      }
     ]
   },
   "1374826016077512814": {
     "username": "naosabomatematica2_94301",
     "currentCycleId": "1.1",
     "currentCycleHits": [],
-    "history": []
+    "history": [],
+    "simulados": []
   }
 }
